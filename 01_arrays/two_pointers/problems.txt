@@ -52,6 +52,23 @@ Solution:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
+-------------------Remove Duplicates from Sorted Array II - LC 80 (Medium)-------------------
+
+Problem Description
+You are given an integer array nums that is sorted in non-decreasing order. Your task is to remove duplicates from this array in-place such that each unique element appears at most twice. The relative order of elements must be preserved.
+
+The key requirements are:
+
+Modify the array in-place (cannot create a new array)
+Use only O(1) extra memory
+Each unique number can appear at most 2 times
+Return the length k of the modified array
+The first k elements of nums should contain the final result
+For example:
+
+If nums = [1,1,1,2,2,3], after removing duplicates where each element appears at most twice, the array becomes [1,1,2,2,3,_] where _ represents any value (doesn't matter). The function should return k = 5.
+
+Solution:
 
 
 
