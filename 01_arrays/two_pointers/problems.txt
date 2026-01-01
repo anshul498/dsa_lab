@@ -74,6 +74,28 @@ Solution:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
+-------------------Boats to Save People - LC 881 (Medium)-------------------
 
+Problem Description
+You have an array people where each element people[i] represents the weight of the i-th person. You also have an infinite number of boats available, and each boat has a maximum weight capacity called limit.
+
+Each boat can carry at most 2 people at the same time, but only if their combined weight doesn't exceed the limit.
+
+Your task is to find the minimum number of boats needed to carry all the people.
+
+For example, if people = [1, 2] and limit = 3, you can put both people in one boat since 1 + 2 = 3 ≤ limit, so you need only 1 boat.
+
+If people = [3, 2, 2, 1] and limit = 3, you would need 3 boats:
+
+Boat 1: person with weight 3 (alone, since 3 + any other weight > 3)
+Boat 2: person with weight 2 and person with weight 1 (combined weight = 3)
+Boat 3: person with weight 2 (alone)
+
+Constraints:
+Each boat can hold at most 2 people
+The total weight in a boat cannot exceed limit
+You want to minimize the total number of boats used
+
+Solution:
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
