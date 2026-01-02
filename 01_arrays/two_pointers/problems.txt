@@ -24,7 +24,23 @@ Time Complexity: O(n)
 Auxiliary Space: O(1)
 
 Solution:
+def findmaxwater(arr):
 
+    i=0
+    j=len(arr) - 1
+    area=0
+    while i<j:
+        height=min(arr[i],arr[j])
+        width=j-1
+        area=max(area,height*width)
+        if arr[i]<arr[j]:
+            i=i+1
+        else:
+            j=j-1
+    return area
+
+print(findmaxwater([1, 5, 4, 3]))
+print(findmaxwater([3, 1, 2, 4, 5]))
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
 -------------------Sort Colors - LC 75 (Medium)-------------------
@@ -48,7 +64,25 @@ Each nums[i] is 0, 1, or 2.
 The solution must be in-place (no extra array should be allocated for sorting).
 
 Solution:
+def sort_colors(arr):
+     i=0
+     k=0
+     j=len(arr)-1
 
+     while k<=j:
+         if arr[k]==0:
+            arr[i],arr[k]=arr[k],arr[i]
+            i=i+1
+            k=k+1
+         elif arr[k]==1:
+            k=k+1
+         else:
+             arr[j], arr[k] = arr[k], arr[j]
+             j=j-1
+     return arr
+
+print(sort_colors([2, 0, 2, 1, 1, 0,1,0]))
+print(sort_colors([2, 0, 1]))
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -69,8 +103,20 @@ For example:
 If nums = [1,1,1,2,2,3], after removing duplicates where each element appears at most twice, the array becomes [1,1,2,2,3,_] where _ represents any value (doesn't matter). The function should return k = 5.
 
 Solution:
+def remdups2(arr):
+    if len(arr)<=2:
+        return len(arr)
+    k=2
+
+    for i in range(2,len(arr)):
+        if arr[i]!=arr[k-2]:
+            arr[k]=arr[i]
+            k=k+1
+    return k
 
 
+print(remdups2([1,1,1,2,2,3]))
+print(remdups2([0,0,1,1,1,1,2,3,3]))
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -97,5 +143,20 @@ The total weight in a boat cannot exceed limit
 You want to minimize the total number of boats used
 
 Solution:
+def getnumboats(arr,limit):
+    arr.sort()
+    i=0
+    j=len(arr)-1
+    cnt=0
+    while i<=j:
+        if arr[i]+arr[j]<=limit:
+            i=i+1
+        j=j-1
+        cnt=cnt+1
+    return cnt
 
+
+
+print(getnumboats([9,8,2,5],10))
+print(getnumboats([3,2,2,1],3))
 -------------------------------------------------------------------------------------------------------------------------------------------------
