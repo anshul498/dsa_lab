@@ -37,3 +37,46 @@ nums = [5], k = 1
 - `-10⁴ <= nums[i] <= 10⁴`
 
 ## Solution
+
+
+
+---
+
+# Moving Average from Data Stream — LeetCode 346 (Easy)
+
+## Problem Description
+Given a stream of integers and a window size, calculate the **moving average** of all integers in the sliding window.
+
+Implement a class `MovingAverage` that computes the moving average from a data stream using a **fixed-size sliding window**.
+
+---
+
+## Class Definition
+
+### `MovingAverage(int size)`
+- Initializes the object with a window size.
+- The window holds **at most `size` recent values** from the stream.
+
+### `next(int val)`
+- Adds a new integer `val` to the stream.
+- Returns the average of the **most recent values** in the window.
+- If the total number of values seen so far is less than the window size, return the average of **all values so far**.
+
+---
+
+## Example
+
+```text
+MovingAverage m = new MovingAverage(3);
+m.next(1)  -> 1
+m.next(10) -> (1 + 10) / 2
+m.next(3)  -> (1 + 10 + 3) / 3
+m.next(5)  -> (10 + 3 + 5) / 3
+
+
+---
+
+## Solution
+
+
+---
