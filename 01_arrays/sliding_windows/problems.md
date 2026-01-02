@@ -38,7 +38,7 @@ nums = [5], k = 1
 
 ## Solution
 
-
+## Complexity Analysis
 
 ---
 
@@ -77,6 +77,105 @@ m.next(5)  -> (10 + 3 + 5) / 3
 ---
 
 ## Solution
+
+## Complexity Analysis
+
+
+---
+
+# Longest Substring Without Repeating Characters — LeetCode 3 (Medium)
+
+## Problem Description
+
+Given a string s, find the length of the longest substring without duplicate characters.
+
+ ---
+
+## Example
+
+```text
+Example 1:
+
+Input: s = "abcabcbb"
+Output: 3
+Explanation: The answer is "abc", with the length of 3. Note that "bca" and "cab" are also correct answers.
+Example 2:
+
+Input: s = "bbbbb"
+Output: 1
+Explanation: The answer is "b", with the length of 1.
+Example 3:
+
+Input: s = "pwwkew"
+Output: 3
+Explanation: The answer is "wke", with the length of 3.
+Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
+```
+
+---
+
+## Constraints
+
+0 <= s.length <= 5 * 104
+s consists of English letters, digits, symbols and spaces.
+
+---
+
+## Solution
+
+## Complexity Analysis
+
+
+---
+
+# Minimum Window Substring — LeetCode 76 (Hard)
+
+## Problem Description
+
+Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
+
+The testcases will be generated such that the answer is unique.
+
+ ---
+
+## Example
+
+```text
+Example 1:
+
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: The minimum window substring "BANC" includes 'A', 'B', and 'C' from string t.
+Example 2:
+
+Input: s = "a", t = "a"
+Output: "a"
+Explanation: The entire string s is the minimum window.
+Example 3:
+
+Input: s = "a", t = "aa"
+Output: ""
+Explanation: Both 'a's from t must be included in the window.
+Since the largest window of s only has one 'a', return empty string.
+```
+
+---
+
+## Constraints
+
+m == s.length
+n == t.length
+1 <= m, n <= 105
+s and t consist of uppercase and lowercase English letters.
+
+## Follow up: 
+Could you find an algorithm that runs in O(m + n) time?
+
+---
+
+## Solution
+
+## Complexity Analysis
 
 
 ---
