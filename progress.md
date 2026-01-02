@@ -2,12 +2,12 @@
 ---
 
 ## 🧮 Overall Progress
-- Total Problems Solved: 0
+- Total Problems Solved: 4
 - Easy: 0
-- Medium: 0
+- Medium: 4
 - Hard: 0
-- Start Date: YYYY-MM-DD
-- Last Updated: YYYY-MM-DD
+- Start Date: 2026-01-01
+- Last Updated: 2026-01-01
 
 ---
 
@@ -15,7 +15,7 @@
 
 | Topic | Solved | Easy | Medium | Hard | Confidence |
 |------|--------|------|--------|------|-----------|
-| Arrays | 0 | 0 | 0 | 0 | ⬜ |
+| Arrays | 4 | 0 | 4 | 0 | 🟨 |
 | Strings | 0 | 0 | 0 | 0 | ⬜ |
 | Hashing | 0 | 0 | 0 | 0 | ⬜ |
 | Linked List | 0 | 0 | 0 | 0 | ⬜ |
@@ -40,7 +40,7 @@
 
 | Pattern | Problems Solved | Confidence |
 |-------|-----------------|-----------|
-| Two Pointers | 0 | ⬜ |
+| Two Pointers | 4 | 🟨 |
 | Sliding Window | 0 | ⬜ |
 | Prefix Sum | 0 | ⬜ |
 | Binary Search | 0 | ⬜ |
@@ -71,11 +71,11 @@
 
 ## 📝 Daily Log
 
-### YYYY-MM-DD
-- Solved:
-- Patterns Used:
+### 2026-01-01
+- Solved: 4
+- Patterns Used: Two Pointer
 - Mistakes / Learnings:
-- Confidence Today: ⬜ / 🟨 / 🟩
+- Confidence Today:  🟨
 
 ---
 
