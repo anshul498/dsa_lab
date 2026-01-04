@@ -37,9 +37,29 @@ nums = [5], k = 1
 - `-10⁴ <= nums[i] <= 10⁴`
 
 ## Solution
+## Solution:
+
+```text
+def maxavgsubarr(a,k):
+    win_start=0
+    csum=0
+    max_avg=0
+    for win_end in range(len(a)):
+        csum=csum+a[win_end]
+        if win_end-win_start+1>=k:
+            max_avg=max(max_avg,csum/k)
+            csum=csum-a[win_start]
+            win_start=win_start+1
+    return max_avg
+
+print(maxavgsubarr([1, 12, -5, -6, 50, 3],4))
+print(maxavgsubarr([5],1))
+
+```
 
 ## Complexity Analysis
-
+Space: O(1)
+Time: O(n)
 ---
 
 # Moving Average from Data Stream — LeetCode 346 (Easy)
@@ -78,8 +98,34 @@ m.next(5)  -> (10 + 3 + 5) / 3
 
 ## Solution
 
-## Complexity Analysis
 
+```text
+class MovingAverage :
+    def __init__(self,size):
+        self.csum=0
+        self.cnt=0
+        self.window=[0]*size
+
+    def next(self,a):
+        i=self.cnt%len(self.window)
+        self.csum=self.csum+a-self.window[i]
+        self.window[i]=a
+        self.cnt+=1
+        window_size=min(self.cnt,len(self.window))
+        return self.csum/window_size
+
+m=MovingAverage(3)
+print(m.next(1))
+print(m.next(10))
+print(m.next(3))
+print(m.next(5))
+
+```
+
+
+## Complexity Analysis
+Space: O(1)
+Time: O(1)
 
 ---
 
@@ -123,9 +169,33 @@ s consists of English letters, digits, symbols and spaces.
 
 ## Solution
 
+
+```text
+def longsubstrwidoutrepeatchar(s):
+    d={}
+    win_start=0
+    res=''
+    for win_end in range(len(s)):
+        rchr=s[win_end]
+        if rchr not in d:
+            d[rchr]=win_end
+        else:
+            if win_end-win_start+1>len(res):
+                res=s[win_start:win_end]
+                d.clear()
+                d[rchr]=win_end
+                win_start=win_end
+    return len(res)
+
+print(longsubstrwidoutrepeatchar('abcabcbb'))
+print(longsubstrwidoutrepeatchar('bbbbb'))
+print(longsubstrwidoutrepeatchar('pwwkew'))
+```
+
 ## Complexity Analysis
 
-
+Space: O(1)
+Time: O(n)
 ---
 
 # Minimum Window Substring — LeetCode 76 (Hard)
@@ -175,7 +245,45 @@ Could you find an algorithm that runs in O(m + n) time?
 
 ## Solution
 
-## Complexity Analysis
+```text
+import math
+def sol(a,b):
+    pat={}
+    for i in b:
+        if i not in pat:
+            pat[i]=1
+        else:
+            pat[i]+=1
+    win_start=0
+    cnt=0
+    res=''
+    min_cnt=math.inf
+    for win_end in range(len(a)):
+        rchr=a[win_end]
+        if rchr in pat:
+            pat[rchr]-=1
+            if pat[rchr]==0:
+                cnt=cnt+1
+        while cnt==len(pat):
+            if win_end-win_start+1<min_cnt:
+                min_cnt=min(min_cnt,win_end-win_start+1)
+                res=a[win_start:win_end+1]
+            lchr=a[win_start]
+            if lchr in pat:
+                if pat[lchr]==0:
+                    cnt=cnt-1
+                pat[lchr]+=1
+            win_start=win_start+1
+    return res
 
+print(sol('ADOBECODEBANC','ABC'))
+print(sol('A','A'))
+print(sol('A','AA'))
+
+```
+
+## Complexity Analysis
+Space: O(1)
+Time: O(m+n)
 
 ---
