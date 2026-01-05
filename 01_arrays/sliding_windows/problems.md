@@ -5,8 +5,6 @@ You are given an integer array `nums` consisting of `n` elements, and an integer
 Find a **contiguous subarray** whose length is exactly `k` that has the **maximum average value**, and return this value.
 Any answer with a calculation error less than `10⁻⁵` will be accepted.
 
----
-
 ## Examples
 
 ### Example 1
@@ -36,7 +34,6 @@ nums = [5], k = 1
 - `1 <= k <= n <= 10⁵`
 - `-10⁴ <= nums[i] <= 10⁴`
 
-## Solution
 ## Solution:
 
 ```text
@@ -66,10 +63,7 @@ Time: O(n)
 
 ## Problem Description
 Given a stream of integers and a window size, calculate the **moving average** of all integers in the sliding window.
-
 Implement a class `MovingAverage` that computes the moving average from a data stream using a **fixed-size sliding window**.
-
----
 
 ## Class Definition
 
@@ -82,8 +76,6 @@ Implement a class `MovingAverage` that computes the moving average from a data s
 - Returns the average of the **most recent values** in the window.
 - If the total number of values seen so far is less than the window size, return the average of **all values so far**.
 
----
-
 ## Example
 
 ```text
@@ -94,10 +86,7 @@ m.next(3)  -> (1 + 10 + 3) / 3
 m.next(5)  -> (10 + 3 + 5) / 3
 ```
 
----
-
 ## Solution
-
 
 ```text
 class MovingAverage :
@@ -119,10 +108,7 @@ print(m.next(1))
 print(m.next(10))
 print(m.next(3))
 print(m.next(5))
-
 ```
-
-
 ## Complexity Analysis
 Space: O(1)
 Time: O(1)
@@ -134,8 +120,6 @@ Time: O(1)
 ## Problem Description
 
 Given a string s, find the length of the longest substring without duplicate characters.
-
- ---
 
 ## Example
 
@@ -158,17 +142,12 @@ Explanation: The answer is "wke", with the length of 3.
 Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
 ```
 
----
-
 ## Constraints
 
 0 <= s.length <= 5 * 104
 s consists of English letters, digits, symbols and spaces.
 
----
-
 ## Solution
-
 
 ```text
 def longsubstrwidoutrepeatchar(s):
@@ -201,12 +180,9 @@ Time: O(n)
 # Minimum Window Substring — LeetCode 76 (Hard)
 
 ## Problem Description
-
 Given two strings s and t of lengths m and n respectively, return the minimum window substring of s such that every character in t (including duplicates) is included in the window. If there is no such substring, return the empty string "".
 
 The testcases will be generated such that the answer is unique.
-
- ---
 
 ## Example
 
@@ -229,8 +205,6 @@ Explanation: Both 'a's from t must be included in the window.
 Since the largest window of s only has one 'a', return empty string.
 ```
 
----
-
 ## Constraints
 
 m == s.length
@@ -240,8 +214,6 @@ s and t consist of uppercase and lowercase English letters.
 
 ## Follow up: 
 Could you find an algorithm that runs in O(m + n) time?
-
----
 
 ## Solution
 
@@ -285,5 +257,51 @@ print(sol('A','AA'))
 ## Complexity Analysis
 Space: O(1)
 Time: O(m+n)
+
+---
+
+# Sliding Window Maximum — LeetCode 239 (Hard)
+
+## Problem Description
+You are given an array of integers nums, there is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+
+Return the max sliding window.
+
+## Examples
+
+### Example 1
+**Input**
+nums = [1,3,-1,-3,5,3,6,7], k = 3
+
+**Output** 
+[3,3,5,5,6,7]
+
+**Explanation**
+Window position                Max
+---------------               -----
+[1  3  -1] -3  5  3  6  7       3
+ 1 [3  -1  -3] 5  3  6  7       3
+ 1  3 [-1  -3  5] 3  6  7       5
+ 1  3  -1 [-3  5  3] 6  7       5
+ 1  3  -1  -3 [5  3  6] 7       6
+ 1  3  -1  -3  5 [3  6  7]      7
+
+
+### Example 2
+**Input**
+nums = [1], k = 1
+**Output** 
+ [1]
+ 
+
+## Constraints
+
+1 <= nums.length <= 105
+-104 <= nums[i] <= 104
+1 <= k <= nums.length
+
+## Solution
+
+## Complexity Analysis
 
 ---
