@@ -306,3 +306,154 @@ nums = [1], k = 1
 ## Complexity Analysis
 
 ---
+
+# Fruit Into Baskets — LeetCode 904 (Hard)
+
+## Problem Description
+You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
+
+You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:
+
+You only have two baskets, and each basket can only hold a single type of fruit. There is no limit on the amount of fruit each basket can hold.
+Starting from any tree of your choice, you must pick exactly one fruit from every tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.
+Once you reach a tree with fruit that cannot fit in your baskets, you must stop.
+Given the integer array fruits, return the maximum number of fruits you can pick.
+
+## Examples
+
+### Example 1
+**Input**
+fruits = [1,2,1]
+
+**Output** 
+3
+
+**Explanation**
+We can pick from all 3 trees.
+
+
+### Example 2
+**Input**
+fruits = [0,1,2,2]
+**Output** 
+ 3
+
+**Explanation**
+ We can pick from trees [1,2,2].
+If we had started at the first tree, we would only pick from trees [0,1].
+ 
+
+## Constraints
+
+1 <= fruits.length <= 105
+0 <= fruits[i] < fruits.length
+
+## Solution
+
+## Complexity Analysis
+
+---
+
+# Minimum Operations to Reduce X to Zero — LeetCode 1658 (Medium)
+
+## Problem Description
+You are given an integer array nums and an integer x. In one operation, you can either remove the leftmost or the rightmost element from the array nums and subtract its value from x. Note that this modifies the array for future operations.
+
+Return the minimum number of operations to reduce x to exactly 0 if it is possible, otherwise, return -1.
+
+## Examples
+
+### Example 1
+**Input**
+nums = [1,1,4,2,3], x = 5   
+
+**Output** 
+2
+
+**Explanation**
+The optimal solution is to remove the last two elements to reduce x to zero.
+
+
+### Example 2
+**Input**
+nums = [5,6,7,8,9], x = 4
+**Output** 
+ -1
+
+### Example 3
+**Input**
+nums = [3,2,20,1,1,3], x = 10
+**Output** 
+ 5
+
+**Explanation**
+The optimal solution is to remove the last three elements and the first two elements (5 operations in total) to reduce x to zero.
+ 
+
+## Constraints
+
+1 <= nums.length <= 105
+1 <= nums[i] <= 104
+1 <= x <= 109
+
+## Solution
+
+## Complexity Analysis
+
+---
+
+# Maximum Beauty of an Array After Applying Operation — LeetCode 2779 (Medium)
+
+## Problem Description
+You are given a 0-indexed array nums and a non-negative integer k.
+
+In one operation, you can do the following:
+
+Choose an index i that hasn't been chosen before from the range [0, nums.length - 1].
+Replace nums[i] with any integer from the range [nums[i] - k, nums[i] + k].
+The beauty of the array is the length of the longest subsequence consisting of equal elements.
+
+Return the maximum possible beauty of the array nums after applying the operation any number of times.
+
+Note that you can apply the operation to each index only once.
+
+A subsequence of an array is a new array generated from the original array by deleting some elements (possibly none) without changing the order of the remaining elements.
+
+## Examples
+
+### Example 1
+**Input**
+nums = [4,6,1,2], k = 2
+
+**Output** 
+3
+
+**Explanation**
+In this example, we apply the following operations:
+- Choose index 1, replace it with 4 (from range [4,8]), nums = [4,4,1,2].
+- Choose index 3, replace it with 4 (from range [0,4]), nums = [4,4,1,4].
+After the applied operations, the beauty of the array nums is 3 (subsequence consisting of indices 0, 1, and 3).
+It can be proven that 3 is the maximum possible length we can achieve.
+
+
+### Example 2
+**Input**
+nums = [1,1,1,1], k = 10
+**Output** 
+ 4
+
+**Explanation**
+In this example we don't have to apply any operations.
+The beauty of the array nums is 4 (whole array).
+ 
+
+## Constraints
+
+1 <= nums.length <= 105
+0 <= nums[i], k <= 105
+
+## Solution
+
+## Complexity Analysis
+
+---
