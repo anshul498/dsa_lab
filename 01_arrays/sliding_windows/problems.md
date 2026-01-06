@@ -303,8 +303,35 @@ nums = [1], k = 1
 
 ## Solution
 
+```text
+import math
+from collections import deque
+
+def sliding_max(a,k):
+    q=deque()
+    res=[]
+    def push(n):
+        while q and q[-1]<n:
+            q.pop()
+        q.append(n)
+    for i in range(k):
+        push(a[i])
+    res.append(q[0])
+    for i in range(k,len(a)):
+        if q[0]==a[i-k]:
+            q.popleft()
+        push(a[i])
+        res.append(q[0])
+    return res
+
+print(sliding_max([1,3,-1,-3,5,3,6,7],3))
+print(sliding_max([1],1))
+
+```
 ## Complexity Analysis
 
+Space: O(k)
+Time:o(n)
 ---
 
 # Fruit Into Baskets — LeetCode 904 (Hard)
