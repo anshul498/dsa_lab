@@ -334,7 +334,7 @@ Space: O(k)
 Time:o(n)
 ---
 
-# Fruit Into Baskets — LeetCode 904 (Hard)
+# Fruit Into Baskets — LeetCode 904 (Medium)
 
 ## Problem Description
 You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array fruits where fruits[i] is the type of fruit the ith tree produces.
@@ -377,8 +377,35 @@ If we had started at the first tree, we would only pick from trees [0,1].
 
 ## Solution
 
-## Complexity Analysis
+```text
+def getfruits(a,n):
+    d={}
+    cnt=0
+    max_cnt=0
+    win_start=0
+    for win_end in range(len(a)):
+        rchr=a[win_end]
+        if rchr not in d:
+            d[rchr]=1
+        else:
+            d[rchr]+=1
+        while len(d)>n:
+            lchr=a[win_start]
+            d[lchr]-=1
+            if d[lchr]==0:
+                del d[lchr]
+            win_start+=1
+        max_cnt=max(max_cnt,win_end-win_start+1)
+    return max_cnt
 
+print(getfruits([1,2,1],2))
+print(getfruits([0,1,2,1],2))
+
+
+```
+## Complexity Analysis
+Space - O(1)
+Time: O(n)
 ---
 
 # Minimum Operations to Reduce X to Zero — LeetCode 1658 (Medium)
