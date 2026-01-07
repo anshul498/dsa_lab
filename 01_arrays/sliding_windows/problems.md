@@ -511,3 +511,185 @@ The beauty of the array nums is 4 (whole array).
 ## Complexity Analysis
 
 ---
+
+
+# Frequency of the Most Frequent Element — LeetCode 1838 (Medium)
+
+## Problem Description
+The frequency of an element is the number of times it occurs in an array.
+
+You are given an integer array nums and an integer k. In one operation, you can choose an index of nums and increment the element at that index by 1.
+
+Return the maximum possible frequency of an element after performing at most k operations.
+
+## Examples 
+
+### Example 1:
+
+Input: nums = [1,2,4], k = 5
+Output: 3
+Explanation: Increment the first element three times and the second element two times to make nums = [4,4,4].
+4 has a frequency of 3.
+
+### Example 2:
+
+Input: nums = [1,4,8,13], k = 5
+Output: 2
+Explanation: There are multiple optimal solutions:
+- Increment the first element three times to make nums = [4,4,8,13]. 4 has a frequency of 2.
+- Increment the second element four times to make nums = [1,8,8,13]. 8 has a frequency of 2.
+- Increment the third element five times to make nums = [1,4,13,13]. 13 has a frequency of 2.
+
+### Example 3:
+
+Input: nums = [3,9,6], k = 2
+Output: 1
+ 
+## Constraints:
+
+1 <= nums.length <= 105
+1 <= nums[i] <= 105
+1 <= k <= 105
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Find Longest Special Substring That Occurs Thrice I — LeetCode 2981 (Medium)
+
+## Problem Description
+You are given a string s that consists of lowercase English letters.
+
+A string is called special if it is made up of only a single character. For example, the string "abc" is not special, whereas the strings "ddd", "zz", and "f" are special.
+
+Return the length of the longest special substring of s which occurs at least thrice, or -1 if no special substring occurs at least thrice.
+
+A substring is a contiguous non-empty sequence of characters within a string.
+
+
+## Examples 
+
+### Example 1:
+
+Input: s = "aaaa"
+Output: 2
+Explanation: The longest special substring which occurs thrice is "aa": substrings "aaaa", "aaaa", and "aaaa".
+It can be shown that the maximum length achievable is 2.
+
+### Example 2:
+
+Input: s = "abcdef"
+Output: -1
+Explanation: There exists no special substring which occurs at least thrice. Hence return -1.
+
+### Example 3:
+
+Input: s = "abcaba"
+Output: 1
+Explanation: The longest special substring which occurs thrice is "a": substrings "abcaba", "abcaba", and "abcaba".
+It can be shown that the maximum length achievable is 1.
+
+## Constraints:
+
+3 <= s.length <= 50
+s consists of only lowercase English letters.
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Maximum Frequency of an Element After Performing Operations I — LeetCode 3346 (Medium)
+
+## Problem Description
+You are given an integer array nums and two integers k and numOperations.
+
+You must perform an operation numOperations times on nums, where in each operation you:
+
+Select an index i that was not selected in any previous operations.
+Add an integer in the range [-k, k] to nums[i].
+Return the maximum possible frequency of any element in nums after performing the operations.
+
+## Examples 
+
+### Example 1:
+
+Example 1:
+
+Input: nums = [1,4,5], k = 1, numOperations = 2
+Output: 2
+
+Explanation:
+
+We can achieve a maximum frequency of two by:
+Adding 0 to nums[1]. nums becomes [1, 4, 5].
+Adding -1 to nums[2]. nums becomes [1, 4, 4].
+
+### Example 2:
+
+Input: nums = [5,11,20,20], k = 5, numOperations = 1
+Output: 2
+
+Explanation:
+We can achieve a maximum frequency of two by:
+Adding 0 to nums[1].
+
+## Constraints:
+
+1 <= nums.length <= 105
+1 <= nums[i] <= 105
+0 <= k <= 105
+0 <= numOperations <= nums.length
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Maximum Frequency of an Element After Performing Operations II — LeetCode 3347 (Hard)
+
+## Problem Description
+You are given an integer array nums and two integers k and numOperations.
+
+You must perform an operation numOperations times on nums, where in each operation you:
+
+Select an index i that was not selected in any previous operations.
+Add an integer in the range [-k, k] to nums[i].
+Return the maximum possible frequency of any element in nums after performing the operations.
+
+## Examples 
+
+### Example 1:
+Input: nums = [1,4,5], k = 1, numOperations = 2
+Output: 2
+
+Explanation:
+We can achieve a maximum frequency of two by:
+
+Adding 0 to nums[1], after which nums becomes [1, 4, 5].
+Adding -1 to nums[2], after which nums becomes [1, 4, 4].
+
+### Example 2:
+Input: nums = [5,11,20,20], k = 5, numOperations = 1
+Output: 2
+
+Explanation:
+We can achieve a maximum frequency of two by:
+Adding 0 to nums[1].
+
+## Constraints:
+1 <= nums.length <= 105
+1 <= nums[i] <= 109
+0 <= k <= 109
+0 <= numOperations <= nums.length
+
+## Sol:
+
+## Complexity Analysis:
+
+
+---
