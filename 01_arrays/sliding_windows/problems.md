@@ -664,28 +664,33 @@ Return the maximum possible frequency of any element in nums after performing th
 ## Examples 
 
 ### Example 1:
-Input: nums = [1,4,5], k = 1, numOperations = 2
-Output: 2
+**Input**
+nums = [1,4,5], k = 1, numOperations = 2
+**Output**
+2
 
-Explanation:
+**Explanation**
 We can achieve a maximum frequency of two by:
 
-Adding 0 to nums[1], after which nums becomes [1, 4, 5].
-Adding -1 to nums[2], after which nums becomes [1, 4, 4].
+- Adding 0 to nums[1], after which nums becomes [1, 4, 5].
+- Adding -1 to nums[2], after which nums becomes [1, 4, 4].
+
 
 ### Example 2:
-Input: nums = [5,11,20,20], k = 5, numOperations = 1
-Output: 2
+**Input**
+nums = [5,11,20,20], k = 5, numOperations = 1
+**Output**
+2
 
-Explanation:
+**Explanation**
 We can achieve a maximum frequency of two by:
-Adding 0 to nums[1].
 
+- Adding 0 to nums[1].
 ## Constraints:
-1 <= nums.length <= 105
-1 <= nums[i] <= 109
-0 <= k <= 109
-0 <= numOperations <= nums.length
+- 1 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^9
+- 0 <= k <= 10^9
+- 0 <= numOperations <= nums.length
 
 ## Sol:
 
@@ -700,29 +705,38 @@ Adding 0 to nums[1].
 ## Problem Description
 Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
 
- 
 
 ## Examples 
 
 ### Example 1:
-Input: target = 7, nums = [2,3,1,2,4,3]
-Output: 2
-Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+**Input**
+target = 7, nums = [2,3,1,2,4,3]
+
+**Output**
+2
+
+**Explanation**
+The subarray [4,3] has the minimal length under the problem constraint
 
 ### Example 2:
-Input: target = 4, nums = [1,4,4]
-Output: 1
+**Input**
+target = 4, nums = [1,4,4]
+
+**Output**
+1
 
 ### Example 3:
-Input: target = 11, nums = [1,1,1,1,1,1,1,1]
-Output: 0
- 
-## Constraints:
+**Input**
+target = 11, nums = [1,1,1,1,1,1,1,1]
 
-1 <= target <= 109
-1 <= nums.length <= 105
-1 <= nums[i] <= 104
- 
+**Output**
+0
+
+ ## Constraints
+- 1 <= target <= 10^9
+- 1 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^4
+
 
 ## Sol:
 
@@ -741,24 +755,34 @@ Return the length of the longest substring containing the same letter you can ge
 ## Examples 
 
 ### Example 1:
-Input: s = "ABAB", k = 2
-Output: 4
-Explanation: Replace the two 'A's with two 'B's or vice versa.
+**Input**
+s = "ABAB", k = 2
+
+**Output**
+4
+
+**Explanation**
+Replace the two 'A's with two 'B's or vice versa.
 
 ### Example 2:
-Input: s = "AABABBA", k = 1
-Output: 4
-Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+**Input**
+s = "AABABBA", k = 1
+
+**Output**
+4
+
+**Explanation**
+Replace the one 'A' in the middle with 'B' and form "AABBBBA".
 The substring "BBBB" has the longest repeating letters, which is 4.
 There may exists other ways to achieve this answer too.
+
  
 
 ## Constraints:
-
-1 <= s.length <= 105
-s consists of only uppercase English letters.
-0 <= k <= s.length
-
+- 1 <= s.length <= 10^5
+- s consists of only uppercase English letters.
+- 0 <= k <= s.length
+- 
 ## Sol:
 
 ## Complexity Analysis:
@@ -776,22 +800,30 @@ Given an array of integers nums and an integer k, return the number of contiguou
 
 Example 1:
 
-Input: nums = [10,5,2,6], k = 100
-Output: 8
-Explanation: The 8 subarrays that have product less than 100 are:
+**Input**
+nums = [10,5,2,6], k = 100
+
+**Output**
+8
+
+**Explanation**
+The 8 subarrays that have product less than 100 are:
 [10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
 Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
 
 
 ### Example 2:
 
-Input: nums = [1,2,3], k = 0
-Output: 0
+**Input**
+nums = [1,2,3], k = 0
+
+**Output**
+0
 
 ## Constraints:
-1 <= nums.length <= 3 * 104
-1 <= nums[i] <= 1000
-0 <= k <= 106
+- 1 <= nums.length <= 3 * 10^4
+- 1 <= nums[i] <= 1000
+- 0 <= k <= 10^6
 
 ## Sol:
 
@@ -812,29 +844,42 @@ A subarray is a contiguous non-empty sequence of elements within an array.
 ## Examples 
 
 ### Example 1:
-Input: nums = [5,4,2,4]
-Output: 8
-Explanation: 
-Continuous subarray of size 1: [5], [4], [2], [4].
-Continuous subarray of size 2: [5,4], [4,2], [2,4].
-Continuous subarray of size 3: [4,2,4].
-There are no subarrys of size 4.
+**Input**
+nums = [5,4,2,4]
+
+**Output**
+8
+
+**Explanation**
+Continuous subarray of size 1: [5], [4], [2], [4].  
+Continuous subarray of size 2: [5,4], [4,2], [2,4].  
+Continuous subarray of size 3: [4,2,4].  
+
+There are no subarrays of size 4.
+
 Total continuous subarrays = 4 + 3 + 1 = 8.
+
 It can be shown that there are no more continuous subarrays.
 
 ### Example 2:
-Input: nums = [1,2,3]
-Output: 6
-Explanation: 
-Continuous subarray of size 1: [1], [2], [3].
-Continuous subarray of size 2: [1,2], [2,3].
-Continuous subarray of size 3: [1,2,3].
+**Input**
+nums = [1,2,3]
+
+**Output**
+6
+
+**Explanation**
+Continuous subarray of size 1: [1], [2], [3].  
+Continuous subarray of size 2: [1,2], [2,3].  
+Continuous subarray of size 3: [1,2,3].  
+
 Total continuous subarrays = 3 + 2 + 1 = 6.
  
 
 ## Constraints:
-1 <= nums.length <= 105
-1 <= nums[i] <= 109
+- 1 <= nums.length <= 10^5
+- 1 <= nums[i] <= 10^9
+
 
 ## Sol:
 
