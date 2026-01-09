@@ -693,3 +693,152 @@ Adding 0 to nums[1].
 
 
 ---
+
+
+#  Minimum Size Subarray Sum — LeetCode 209 (Medium)
+
+## Problem Description
+Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+
+ 
+
+## Examples 
+
+### Example 1:
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal length under the problem constraint.
+
+### Example 2:
+Input: target = 4, nums = [1,4,4]
+Output: 1
+
+### Example 3:
+Input: target = 11, nums = [1,1,1,1,1,1,1,1]
+Output: 0
+ 
+## Constraints:
+
+1 <= target <= 109
+1 <= nums.length <= 105
+1 <= nums[i] <= 104
+ 
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Longest Repeating Character Replacement — LeetCode 424 (Medium)
+
+## Problem Description
+You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.
+
+Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+
+## Examples 
+
+### Example 1:
+Input: s = "ABAB", k = 2
+Output: 4
+Explanation: Replace the two 'A's with two 'B's or vice versa.
+
+### Example 2:
+Input: s = "AABABBA", k = 1
+Output: 4
+Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA".
+The substring "BBBB" has the longest repeating letters, which is 4.
+There may exists other ways to achieve this answer too.
+ 
+
+## Constraints:
+
+1 <= s.length <= 105
+s consists of only uppercase English letters.
+0 <= k <= s.length
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Subarray Product Less Than K — LeetCode 713 (Medium)
+
+## Problem Description
+Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
+
+## Examples 
+
+### Example 1:
+
+Example 1:
+
+Input: nums = [10,5,2,6], k = 100
+Output: 8
+Explanation: The 8 subarrays that have product less than 100 are:
+[10], [5], [2], [6], [10, 5], [5, 2], [2, 6], [5, 2, 6]
+Note that [10, 5, 2] is not included as the product of 100 is not strictly less than k.
+
+
+### Example 2:
+
+Input: nums = [1,2,3], k = 0
+Output: 0
+
+## Constraints:
+1 <= nums.length <= 3 * 104
+1 <= nums[i] <= 1000
+0 <= k <= 106
+
+## Sol:
+
+## Complexity Analysis:
+
+---
+
+# Continuous Subarrays — LeetCode 2762 (Medium)
+
+## Problem Description
+You are given a 0-indexed integer array nums. A subarray of nums is called continuous if:
+
+Let i, i + 1, ..., j be the indices in the subarray. Then, for each pair of indices i <= i1, i2 <= j, 0 <= |nums[i1] - nums[i2]| <= 2.
+Return the total number of continuous subarrays.
+
+A subarray is a contiguous non-empty sequence of elements within an array.
+
+## Examples 
+
+### Example 1:
+Input: nums = [5,4,2,4]
+Output: 8
+Explanation: 
+Continuous subarray of size 1: [5], [4], [2], [4].
+Continuous subarray of size 2: [5,4], [4,2], [2,4].
+Continuous subarray of size 3: [4,2,4].
+There are no subarrys of size 4.
+Total continuous subarrays = 4 + 3 + 1 = 8.
+It can be shown that there are no more continuous subarrays.
+
+### Example 2:
+Input: nums = [1,2,3]
+Output: 6
+Explanation: 
+Continuous subarray of size 1: [1], [2], [3].
+Continuous subarray of size 2: [1,2], [2,3].
+Continuous subarray of size 3: [1,2,3].
+Total continuous subarrays = 3 + 2 + 1 = 6.
+ 
+
+## Constraints:
+1 <= nums.length <= 105
+1 <= nums[i] <= 109
+
+## Sol:
+
+## Complexity Analysis:
+
+
+---
